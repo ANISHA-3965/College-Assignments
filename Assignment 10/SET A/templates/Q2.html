@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Employee Management System</title>
+</head>
+<body>
+    <form action="/" method="post">
+        ID:<input type="number" name="id"><br><br>
+        NAME:<input type="text" name="name"><br><br>
+        DEPARTMENT:<input type="text" name="department"><br><br>
+        <button action="submit" value="addstudent">ADD</button>
+    </form>
+    <h3>{{msg}}</h3>
+    <{ if emp }>
+    <h3>Added Employee</h3>
+    <h4>ID:{{emp[0]}}</h4>
+    <h4>NAME:{{emp[1]}}</h4>
+    <h4>DEPARTMENT:{{emp[2]}}</h4>
+    <{ endif }>
+</body>
+</html>

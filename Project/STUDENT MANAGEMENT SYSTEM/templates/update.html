@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Student</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f7;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            width: 400px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #279b62;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .back-btn {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #2878c8;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Update Student</h1>
+
+        <form action="/update/{{ student[0] }}" method="POST">
+
+            <label for="name">Student Name:</label>
+            <input type="text"
+                   id="name"
+                   name="name"
+                   value="{{ student[1] }}"
+                   required>
+
+            <label for="course">Course:</label>
+            <input type="text"
+                   id="course"
+                   name="course"
+                   value="{{ student[2] }}"
+                   required>
+
+            <button type="submit">Update Student</button>
+
+        </form>
+
+        <a href="/" class="back-btn">Back to Home</a>
+
+    </div>
+
+</body>
+</html>

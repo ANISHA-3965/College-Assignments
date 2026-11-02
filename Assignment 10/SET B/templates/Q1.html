@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Feedback System</title>
+</head>
+<body>
+    <form action="/" method="post">
+        Name:<input type="text" name="name"><br><br>
+        Subject:<input type="text" name="subject"><br><br>
+        Feedback: <textarea name="feedback"></textarea><br><br>
+        <button action="submit">SUBMIT</button>
+    </form>
+    <h2>{{msg}}</h2>
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Feedback</th>
+        </tr>
+        {% for f in feedbacks %}
+        <tr>
+            <td>{{f[0]}}</td>
+            <td>{{f[1]}}</td>
+            <td>{{f[2]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
